@@ -18,3 +18,13 @@ body {
     margin-top: -40px;
     min-height: 100px;
 }
+
+.jc-center {
+    display: flex;
+    justify-content: center;
+}
+
+#pokemonImage {
+    margin-top: -245px;
+    width: 200px;
+}
