@@ -1,6 +1,14 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    background-color: #aef9f9 !important;
+}
+
+
+/* general classes *******************************/
+
+.m-40 {
+    margin: 40px;
 }
 
 .font-20 {
@@ -15,6 +23,10 @@ body {
 .btn-outline-success:hover {
     background-color: red !important;
     border-color: red !important;
+}
+
+.container-fluid {
+    width: auto !important;
 }
 
 .backArrow {
@@ -81,11 +93,30 @@ body {
 }
 
 #allPokemon {
-    height: 100px;
     margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.miniPokemon {
+.pokeBox {
     width: 200px;
-    height: 200px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px;
+    border-radius: 50px;
+}
+
+.pokeBox:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: 225ms ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.pokeBox img {
+    width: 90px;
 }

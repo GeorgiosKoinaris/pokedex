@@ -14,7 +14,7 @@
 
 </head>
 
-<body onload="loadPokemon()">
+<body onload="initPokemon()">
 
     <!------------------------view of individual Pokemon ------------------------->
     <div id="pokemonInfo" class="d-none">
@@ -72,16 +72,16 @@
 
     <!------------------------------all pokemon listed---------------------------->
 
-    <div class="d-flex justify-content-between align-items-center">
+    <div class="d-flex justify-content-between align-items-center m-40">
         <h1>Pokédex</h1>
-        <nav class="navbar bg-light">
-            <div class="container-fluid">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </nav>
+
+        <div class="container-fluid">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search your Pokemon" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+
     </div>
     <div id="allPokemon"></div>
 
