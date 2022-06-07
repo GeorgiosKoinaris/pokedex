@@ -76,3 +76,11 @@ function renderPokemonCards(pokemon) {
 //     document.getElementById('stat5').innerHTML = pokemon['stats'][4]['base_stat'];
 //     document.getElementById('stat6').innerHTML = pokemon['stats'][5]['base_stat'];
 // }
+
+function smallWindow() {
+    if ($(window).width < 960) {
+        alert('Less than 960');
+    } else {
+        alert('More than 960');
+    }
+}
