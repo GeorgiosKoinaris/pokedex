@@ -140,7 +140,6 @@
     
     .pokeBox:hover {
         cursor: pointer;
-        transform: scale(1.01);
         transition: 125ms ease-in-out;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
     }
