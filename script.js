@@ -81,6 +81,9 @@ function showPokemonInfo(value) {
     const type = pokemon['types'][0]['type']['name'].charAt(0).toUpperCase() + pokemon['types'][0]['type']['name'].slice(1);
     const color = colors[type.toLowerCase()];
 
+
+    document.getElementById('pokemonInfoBg').classList.remove('d-none');
+    document.getElementById('body').classList.add('noScroll');
     document.getElementById('pokemonInfo').classList.remove('d-none');
     document.getElementById('pokemonName').innerHTML = name;
     document.getElementById('pokemonImage').src = image;
@@ -92,4 +95,9 @@ function showPokemonInfo(value) {
     document.getElementById('stat4').innerHTML = pokemon['stats'][3]['base_stat'];
     document.getElementById('stat5').innerHTML = pokemon['stats'][4]['base_stat'];
     document.getElementById('stat6').innerHTML = pokemon['stats'][5]['base_stat'];
+}
+
+function closeInfoPokemon() {
+    document.getElementById('pokemonInfoBg').classList.add('d-none');
+    document.getElementById('body').classList.remove('noScroll');
 }

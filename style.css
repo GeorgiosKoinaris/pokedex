@@ -8,13 +8,17 @@
     .font-20 {
         font-size: 20px;
     }
+    
+    .noScroll {
+        overflow: hidden;
+    }
     /* individual classes ****************************/
     
     .header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 40px;
+        padding: 40px;
     }
     
     .searchBar {
@@ -51,11 +55,29 @@
         cursor: pointer;
     }
     
+    .pokemonInfoBg {
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .card-style {
+        width: 700px;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
     #pokedex {
         min-height: 50vh;
         background-color: #7AC74C;
         color: white;
         padding: 24px;
+        border-radius: 40px 40px 0 0;
     }
     
     #pokemonType {
@@ -70,10 +92,10 @@
     
     .info-container {
         background-color: white;
-        border-top-left-radius: 40px;
-        border-top-right-radius: 40px;
+        border-radius: 40px;
         margin-top: -40px;
         min-height: 100px;
+        padding-bottom: 20px;
     }
     
     .jc-center {
@@ -83,7 +105,7 @@
     
     #pokemonImage {
         margin-top: -315px;
-        max-width: 297px;
+        max-width: 248px;
     }
     
     .margin-top-big {
@@ -99,7 +121,7 @@
     }
     
     #allPokemon {
-        margin-top: 80px;
+        margin-top: 50px;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
