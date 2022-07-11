@@ -1,156 +1,196 @@
-    body {
-        margin: 0;
-        font-family: 'Roboto', sans-serif;
-        background-color: #aef9f9 !important;
-    }
-    /* general classes *******************************/
-    
-    .font-20 {
-        font-size: 20px;
-    }
-    
-    .noScroll {
-        overflow: hidden;
-    }
-    /* individual classes ****************************/
-    
-    .header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 40px;
-    }
-    
-    .searchBar {
-        display: flex;
-    }
-    
-    .btn {
-        background-color: white !important;
-        color: black !important;
-    }
-    
-    .btn-outline-success:hover {
-        background-color: red !important;
-        border-color: red !important;
-    }
-    
-    .container-fluid {
-        width: auto !important;
-    }
-    
-    .backArrow {
-        background-color: rgba(255, 255, 255, 0.5);
-        width: 35px;
-        height: 35px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 100%;
-        margin-bottom: 5px;
-    }
-    
-    .backArrow img {
-        width: 25px;
-        cursor: pointer;
-    }
-    
-    .pokemonInfoBg {
-        background: rgba(0, 0, 0, 0.5);
-        position: fixed;
-        width: 100%;
-        height: 100%;
-    }
-    
-    .card-style {
-        width: 700px;
-        position: fixed;
-        top: 50px;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    #pokedex {
-        min-height: 50vh;
-        background-color: #7AC74C;
-        color: white;
-        padding: 24px;
-        border-radius: 40px 40px 0 0;
-    }
-    
-    #pokemonType {
-        background-color: rgba(255, 255, 255, 0.5);
-        font-size: 18px;
-        padding: 3px;
-        border-radius: 15px;
-        width: 80px;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .info-container {
-        background-color: white;
-        border-radius: 40px;
-        margin-top: -40px;
-        min-height: 100px;
-        padding-bottom: 20px;
-    }
-    
-    .jc-center {
-        display: flex;
-        justify-content: center;
-    }
-    
-    #pokemonImage {
-        margin-top: -315px;
-        max-width: 248px;
-    }
-    
-    .margin-top-big {
-        margin-top: 50px;
-    }
-    
-    .stat {
-        width: 140px;
-        font-size: 20px;
-        color: rgb(146, 146, 146);
-        margin-top: 25px;
-        margin-right: 30px;
-    }
-    
-    #allPokemon {
-        margin-top: 50px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .pokeBox {
-        width: 200px;
-        height: 300px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-evenly;
-        margin: 10px;
-        border-radius: 50px;
-    }
-    
-    .pokeBox:hover {
-        cursor: pointer;
-        transition: 125ms ease-in-out;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-    }
-    
-    .pokeBox img {
-        width: 90px;
-    }
-    
-    @media (max-width: 510px) {
-        .searchBar {
-            width: 276px;
-            justify-content: center;
-        }
-    }
+                                    body {
+                                        margin: 0;
+                                        font-family: 'Roboto', sans-serif;
+                                        background-color: #aef9f9 !important;
+                                    }
+                                    /* general classes *******************************/
+                                    
+                                    .font-20 {
+                                        font-size: 20px;
+                                    }
+                                    
+                                    .noScroll {
+                                        overflow: hidden;
+                                    }
+                                    /* individual classes ****************************/
+                                    
+                                    .header {
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        padding: 40px;
+                                    }
+                                    
+                                    .searchBar {
+                                        display: flex;
+                                    }
+                                    
+                                    .btn {
+                                        background-color: white !important;
+                                        color: black !important;
+                                    }
+                                    
+                                    .btn-outline-success:hover {
+                                        background-color: red !important;
+                                        border-color: red !important;
+                                    }
+                                    
+                                    .container-fluid {
+                                        width: auto !important;
+                                    }
+                                    
+                                    .backArrow {
+                                        background-color: rgba(255, 255, 255, 0.5);
+                                        width: 35px;
+                                        height: 35px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        border-radius: 100%;
+                                        margin-bottom: 5px;
+                                    }
+                                    
+                                    .backArrow img {
+                                        width: 25px;
+                                        cursor: pointer;
+                                    }
+                                    
+                                    .pokemonInfoBg {
+                                        background: rgba(0, 0, 0, 0.5);
+                                        position: fixed;
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                    
+                                    .card-style {
+                                        width: 700px;
+                                        position: fixed;
+                                        top: 50px;
+                                        left: 0;
+                                        right: 0;
+                                        margin-left: auto;
+                                        margin-right: auto;
+                                    }
+                                    
+                                    #pokedex {
+                                        min-height: 50vh;
+                                        background-color: #7AC74C;
+                                        color: white;
+                                        padding: 24px;
+                                        border-radius: 40px 40px 0 0;
+                                    }
+                                    
+                                    #pokemonType {
+                                        background-color: rgba(255, 255, 255, 0.5);
+                                        font-size: 18px;
+                                        padding: 3px;
+                                        border-radius: 15px;
+                                        width: 80px;
+                                        display: flex;
+                                        justify-content: center;
+                                    }
+                                    
+                                    .info-container {
+                                        background-color: white;
+                                        border-radius: 40px;
+                                        margin-top: -40px;
+                                        min-height: 100px;
+                                        padding-bottom: 20px;
+                                    }
+                                    
+                                    .jc-center {
+                                        display: flex;
+                                        justify-content: center;
+                                    }
+                                    
+                                    #pokemonImage {
+                                        margin-top: -315px;
+                                        max-width: 248px;
+                                    }
+                                    
+                                    .margin-top-big {
+                                        margin-top: 50px;
+                                    }
+                                    
+                                    .stat {
+                                        width: 140px;
+                                        font-size: 20px;
+                                        color: rgb(146, 146, 146);
+                                        margin-top: 25px;
+                                        margin-right: 30px;
+                                    }
+                                    
+                                    #allPokemon {
+                                        margin-top: 50px;
+                                        display: flex;
+                                        justify-content: center;
+                                        flex-wrap: wrap;
+                                    }
+                                    
+                                    .pokeBox {
+                                        width: 200px;
+                                        height: 300px;
+                                        display: flex;
+                                        align-items: center;
+                                        flex-direction: column;
+                                        justify-content: space-evenly;
+                                        margin: 10px;
+                                        border-radius: 50px;
+                                    }
+                                    
+                                    .pokeBox:hover {
+                                        cursor: pointer;
+                                        transition: 125ms ease-in-out;
+                                        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+                                    }
+                                    
+                                    .pokeBox img {
+                                        width: 90px;
+                                    }
+                                    
+                                    @media (max-width: 815px) {
+                                        .card-style {
+                                            width: 500px;
+                                        }
+                                    }
+                                    
+                                    @media (max-width: 615px) {
+                                        .card-style {
+                                            width: 360px;
+                                        }
+                                    }
+                                    
+                                    @media (max-width: 400px) {
+                                        .card-style {
+                                            width: 280px;
+                                        }
+                                        #pokemonImage {
+                                            max-width: 180px;
+                                        }
+                                    }
+                                    
+                                    @media (max-width: 510px) {
+                                        .searchBar {
+                                            width: 276px;
+                                            justify-content: center;
+                                        }
+                                    }
+                                    
+                                    @media (max-width: 400px) {
+                                        .card-style {
+                                            width: 240px;
+                                        }
+                                        #pokemonImage {
+                                            max-width: 160px;
+                                        }
+                                        .backArrow {
+                                            margin-right: 5px;
+                                        }
+                                    }
+                                    
+                                    @media (max-width: 305px) {
+                                        .searchBar {
+                                            width: unset;
+                                            flex-direction: column;
+                                        }
+                                    }
