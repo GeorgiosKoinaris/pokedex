@@ -180,11 +180,33 @@
                                         .card-style {
                                             width: 240px;
                                         }
+                                        .backArrow {
+                                            margin-right: 5px;
+                                        }
+                                        .margin-top-big {
+                                            margin-top: 25px;
+                                        }
+                                        .stat {
+                                            margin-top: 5px;
+                                        }
+                                    }
+                                    
+                                    @media (max-width: 395px) {
+                                        .card-style {
+                                            width: 240px;
+                                        }
                                         #pokemonImage {
-                                            max-width: 160px;
+                                            max-width: 130px;
+                                            margin-top: -160px;
                                         }
                                         .backArrow {
                                             margin-right: 5px;
+                                        }
+                                        .margin-top-big {
+                                            margin-top: 25px;
+                                        }
+                                        .stat {
+                                            margin-top: 5px;
                                         }
                                     }
                                     
