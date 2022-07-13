@@ -10,70 +10,14 @@
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="script.js"></script>
+    <script src="html.js"></script>
 
 
 </head>
 
 <body id="body" onload="initPokemon()">
 
-    <!------------------------view of individual Pokemon ------------------------->
-    <div id="pokemonInfoBg" onclick="closeInfoPokemon()" class="pokemonInfoBg d-none">
-        <div id="pokemonInfo" class="d-none card-style">
-            <div id="pokedex">
-                <div class="d-flex justify-content-between mb-3">
-                    <div onclick="closeInfoPokemon()" class="backArrow"><img src="img/back_arrow.png" alt=""></div>
-                    <div class="d-flex">
-                        <input id="inputField" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-between">
-                    <h1 id="pokemonName">Name</h1>
-                    <h4 id="pokemonNumber">#001</h4>
-                </div>
-                <div id="pokemonType">grass</div>
-            </div>
-
-            <div class="info-container">
-                <div class="jc-center">
-                    <img id="pokemonImage" src="" alt="Bild">
-                </div>
-                <h3 class="margin-top-big justify-content-center d-flex">Base Stats</h3>
-                <!---------------Stats header---------------->
-                <div class="d-flex flex-column align-items-center">
-                    <div class="d-flex">
-                        <!------------showing stats------------->
-                        <div class="stat">HP</div>
-                        <div class="mt-auto font-20" id="stat1">1</div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="stat">Attack</div>
-                        <div class="mt-auto font-20" id="stat2">1</div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="stat">Defense</div>
-                        <div class="mt-auto font-20" id="stat3">1</div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="stat">Special Attack</div>
-                        <div class="mt-auto font-20" id="stat4">1</div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="stat">Special Defense</div>
-                        <div class="mt-auto font-20" id="stat5">1</div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="stat">Speed</div>
-                        <div class="mt-auto font-20" id="stat6">1</div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!------------------------------all pokemon listed---------------------------->
-
     <div class="header">
         <h1 class="mb-4">Pokédex</h1>
         <div class="searchBar">
@@ -84,6 +28,9 @@
 
     </div>
     <div id="allPokemon"></div>
+
+    <!------------------------view of individual Pokemon ------------------------->
+    <div id="pokemonInfo"></div>
 
 </body>
 

@@ -73,31 +73,15 @@ function renderPokemonCards(pokemon) {
 
 // //////////////////show selected Pokemon in seperate div///////////////////////////////////////////////////////////////
 function showPokemonInfo(value) {
-    const pokemon = fetchedPokemons[value];
-    const name = pokemon['name'].charAt(0).toUpperCase() + pokemon['name'].slice(1);
-    const image = pokemon['sprites']['other']['dream_world']['front_default'];
-    const number = '#' + pokemon['id'].toString().padStart(3, '0');
-    const id = pokemon['id'].toString();
-    const type = pokemon['types'][0]['type']['name'].charAt(0).toUpperCase() + pokemon['types'][0]['type']['name'].slice(1);
-    const color = colors[type.toLowerCase()];
 
-
-    document.getElementById('pokemonInfoBg').classList.remove('d-none');
+    document.getElementById('pokemonInfo').innerHTML = '';
+    generateInfoCardHtml(value);
     document.getElementById('body').classList.add('noScroll');
-    document.getElementById('pokemonInfo').classList.remove('d-none');
-    document.getElementById('pokemonName').innerHTML = name;
-    document.getElementById('pokemonImage').src = image;
-    document.getElementById('pokemonNumber').innerHTML = number;
-    document.getElementById('pokemonType').innerHTML = type;
-    document.getElementById('stat1').innerHTML = pokemon['stats'][0]['base_stat'];
-    document.getElementById('stat2').innerHTML = pokemon['stats'][1]['base_stat'];
-    document.getElementById('stat3').innerHTML = pokemon['stats'][2]['base_stat'];
-    document.getElementById('stat4').innerHTML = pokemon['stats'][3]['base_stat'];
-    document.getElementById('stat5').innerHTML = pokemon['stats'][4]['base_stat'];
-    document.getElementById('stat6').innerHTML = pokemon['stats'][5]['base_stat'];
+
 }
 
-function closeInfoPokemon() {
+
+function closePokemonInfo() {
     document.getElementById('pokemonInfoBg').classList.add('d-none');
     document.getElementById('body').classList.remove('noScroll');
 }
