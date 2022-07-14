@@ -3,8 +3,6 @@ let currentPokemon;
 //array for the fetched pokemons/////////////////
 let fetchedPokemons = [];
 
-//amount of all pokemons/////////////////////////
-const pokemonNumber = 151;
 
 //defined colours for types of pokemons//////////
 const colors = {
@@ -28,31 +26,26 @@ const colors = {
     fairy: '#D685AD',
 };
 
-//download API from server/////////////////////////
+// download API from server/////////////////////////
+async function loadPokemon() {
+    for (let i = 1; i <= 151; i++) {
+        let url = `https://pokeapi.co/api/v2/pokemon/${i}`;
+        let response = await fetch(url);
+        currentPokemon = await response.json();
+        fetchedPokemons.push(currentPokemon);
 
-async function initPokemon() {
-    for (let i = 1; i <= pokemonNumber; i++) {
-        await loadPokemon(i);
+        renderPokemonCards(i);
     }
 }
 
-async function loadPokemon(id) {
-    let url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-    let response = await fetch(url);
-    currentPokemon = await response.json();
-    fetchedPokemons.push(currentPokemon);
-
-    renderPokemonCards(currentPokemon);
-}
-
 //render all 151 Pokemon//////////////////////////
-
-function renderPokemonCards(pokemon) {
-    const name = pokemon['name'].charAt(0).toUpperCase() + pokemon['name'].slice(1);
-    const image = pokemon['sprites']['other']['dream_world']['front_default'];
-    const number = pokemon['id'].toString().padStart(3, '0');
-    const id = pokemon['id'].toString();
-    const type = pokemon['types'][0]['type']['name'].charAt(0).toUpperCase() + pokemon['types'][0]['type']['name'].slice(1);
+function renderPokemonCards(i) {
+    const pokemon = i - 1;
+    const name = fetchedPokemons[pokemon]['name'].charAt(0).toUpperCase() + fetchedPokemons[pokemon]['name'].slice(1);
+    const image = fetchedPokemons[pokemon]['sprites']['other']['dream_world']['front_default'];
+    const number = fetchedPokemons[pokemon]['id'].toString().padStart(3, '0');
+    const id = fetchedPokemons[pokemon]['id'].toString();
+    const type = fetchedPokemons[pokemon]['types'][0]['type']['name'].charAt(0).toUpperCase() + fetchedPokemons[pokemon]['types'][0]['type']['name'].slice(1);
     const color = colors[type.toLowerCase()];
 
 
@@ -68,8 +61,20 @@ function renderPokemonCards(pokemon) {
     document.getElementById('pokeBox' + id).style.backgroundColor = `${color}`;
 }
 
+//////////////////search for pokemon///////////////////////////////////////////////////////////////
+function searchPokemon() {
+    let search = document.getElementById('searchBar').value;
+    search = search.toLowerCase();
 
-// //////////////////show selected Pokemon in seperate div///////////////////////////////////////////////////////////////
+    document.getElementById('allPokemon').innerHTML = '';
+    for (let i = 0; i < fetchedPokemons.length; i++) {
+        if (fetchedPokemons[i]['name'].toLowerCase().includes(search)) {
+            renderPokemonCards(i + 1);
+        }
+    }
+}
+
+//////////////////show selected Pokemon in seperate div///////////////////////////////////////////////////////////////
 function showPokemonInfo(value) {
 
     document.getElementById('pokemonInfo').innerHTML = '';
@@ -77,7 +82,6 @@ function showPokemonInfo(value) {
     document.getElementById('body').classList.add('noScroll');
 
 }
-
 
 function closePokemonInfo() {
     document.getElementById('pokemonInfoBg').classList.add('d-none');

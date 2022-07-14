@@ -19,13 +19,12 @@ function generateInfoCardHtml(i) {
             <div class="d-flex justify-content-between mb-3">
                 <div onclick="closePokemonInfo()" class="backArrow"><img src="img/back_arrow.png" alt=""></div>
                 <div class="d-flex">
-                    <input id="inputField" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <h4>${number}</h4>
                 </div>
             </div>
             <div class="d-flex justify-content-between">
                 <h1>${name}</h1>
-                <h4>${number}</h4>
+                
             </div>
             <div class="infoCardType">${type}</div>
         </div>

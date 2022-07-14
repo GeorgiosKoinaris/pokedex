@@ -15,14 +15,14 @@
 
 </head>
 
-<body id="body" onload="initPokemon()">
+<body id="body" onload="loadPokemon()">
 
     <!------------------------------all pokemon listed---------------------------->
     <div class="header">
         <h1 class="mb-4">Pokédex</h1>
         <div class="searchBar">
-            <input class="form-control me-2" type="search" placeholder="Search your Pokemon" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <input id="searchBar" onkeyup="searchPokemon()" class="form-control me-2" type="search" placeholder="Search your Pokemon" aria-label="Search">
+            <!-- <button id="searchBtn" class="btn btn-outline-success" type="submit">Search</button> -->
         </div>
 
 
