@@ -42,8 +42,6 @@ async function loadPokemon(id) {
     currentPokemon = await response.json();
     fetchedPokemons.push(currentPokemon);
 
-    // console.log(currentPokemon);
-
     renderPokemonCards(currentPokemon);
 }
 
