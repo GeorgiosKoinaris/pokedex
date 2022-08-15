@@ -43,23 +43,23 @@ function generateInfoCardHtml(i) {
                 </div>
                 <div class="d-flex">
                     <div class="stat">Attack</div>
-                    <div class="mt-auto font-20">${stat1}</div>
-                </div>
-                <div class="d-flex">
-                    <div class="stat">Defense</div>
                     <div class="mt-auto font-20">${stat2}</div>
                 </div>
                 <div class="d-flex">
-                    <div class="stat">Special Attack</div>
+                    <div class="stat">Defense</div>
                     <div class="mt-auto font-20">${stat3}</div>
                 </div>
                 <div class="d-flex">
-                    <div class="stat">Special Defense</div>
+                    <div class="stat">Special Attack</div>
                     <div class="mt-auto font-20">${stat4}</div>
                 </div>
                 <div class="d-flex">
-                    <div class="stat">Speed</div>
+                    <div class="stat">Special Defense</div>
                     <div class="mt-auto font-20">${stat5}</div>
+                </div>
+                <div class="d-flex">
+                    <div class="stat">Speed</div>
+                    <div class="mt-auto font-20">${stat6}</div>
                 </div>
 
             </div>
